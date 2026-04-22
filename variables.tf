@@ -33,3 +33,15 @@ variable "availability_zones" {
   type = list(string)
   default = [ "eu-west-2a", "eu-west-2b" ]
 }
+
+variable "db_name" {
+  description = "Name of the database"
+  type        = string
+  default     = "devtask"
+}
+
+variable "db_username" {
+  description = "Database master username"
+  type        = string
+  default     = "devtask_admin"
+}
