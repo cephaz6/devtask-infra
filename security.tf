@@ -1,7 +1,7 @@
 # --- ALB Security Group ---
 resource "aws_security_group" "alb" {
   name        = "${var.project_name}-alb-sg"
-  description = "Security group for ALB"
+  description = "Allow HTTP/HTTPS from Internet"
   vpc_id      = aws_vpc.main.id
 
   ingress {
@@ -12,7 +12,7 @@ resource "aws_security_group" "alb" {
     cidr_blocks      = ["0.0.0.0/0"]
   }
 
-  ingress = {
+  ingress  {
     description      = "HTTPS"
     from_port        = 443
     to_port          = 443
