@@ -27,3 +27,8 @@ output "db_secret_arn" {
   description = "ARN of the database password secret"
   value       = aws_secretsmanager_secret.db_password.arn
 }
+
+output "alb_dns_name" {
+  description = "DNS name of the load balancer"
+  value       = aws_lb.main.dns_name
+}
