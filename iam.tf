@@ -14,7 +14,7 @@ resource "aws_iam_role" "ecs_execution" {
         }
       }
     ]
-  })
+  }) 
 
   tags = {
     Name = "${var.project_name}-ecs-execution-role"
